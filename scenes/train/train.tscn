@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cmoyblaogt1jp"]
+
+[ext_resource type="Script" path="res://scenes/train/train.gd" id="1_0dduj"]
+[ext_resource type="Texture2D" uid="uid://lowhhk8vwiws" path="res://icon.svg" id="2_4u1q8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6xmd7"]
+size = Vector2(127.333, 128)
+
+[node name="Train" type="StaticBody2D"]
+scale = Vector2(1.5, 1)
+script = ExtResource("1_0dduj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 0, 0, 1)
+texture = ExtResource("2_4u1q8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.333331, 0)
+shape = SubResource("RectangleShape2D_6xmd7")
